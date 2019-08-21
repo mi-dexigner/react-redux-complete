@@ -1,7 +1,3 @@
 # React Redux Complete
 
-## CDN USING LInk
- - Component
- - State
- - DOM
- - Form
+- npx create-react-app . (dot means in root folder install with dependance)
