@@ -28,4 +28,17 @@
   - Navbar.js
   - ContactForm.js
 
- ## Props
+ ## Container vs UI Componenets
+
+ #### Container Components
+ - Contain state
+ - Contain lifecycle
+ - Not concerned with UI
+ - Use classes to create
+ 
+
+ #### UI Components
+ - Don't contain state
+ - Receive data from props
+ - Only concerned with UI
+ - Use functions to create
