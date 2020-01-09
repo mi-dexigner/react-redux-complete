@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Ninjas = ({ ninjas }) => {
+const Ninjas = ({ ninjas,deleteNinja }) => {
 
     // console.log(this.props);
     // const {name,age,birthday } = this.props;
@@ -22,6 +22,7 @@ const Ninjas = ({ ninjas }) => {
                           <div className="ninja" key={ninja.id}>
                     <div>Name: {ninja.name}</div>
                     <div>Age: {ninja.age}</div>
+                    <button onClick={()=>{deleteNinja(ninja.id)}}>delete ninja</button>
                 </div>
         ):null ; 
     })
