@@ -43,4 +43,5 @@
  - Only concerned with UI
  - Use functions to create
 
-## Forms Revisited
+## React life cycle
+- http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/

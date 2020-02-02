@@ -27,6 +27,13 @@ deleteNinja = (id) =>{
     ninjas:ninjas
   })
 }
+componentDidMount(){
+  console.log('componentDidMount');
+}
+componentDidUpdate(prevProps,prevState){
+  console.log('componentDidUpdate');
+  console.log(prevProps,prevState);
+}
 render() {
   return (
     <div className="App">
