@@ -46,6 +46,15 @@
 ## React life cycle
 - http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 
+## React Router
+- npm install react-router-dom
+- 
+## Programmatic Redirects
+``sh
+setTimeout(()=>{
+        props.history.push('/about');
+    },2000)
+```
 
 ## Resource LINK
 - https://materializecss.com/
