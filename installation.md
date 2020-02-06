@@ -48,7 +48,11 @@
 
 ## React Router
 - npm install react-router-dom
+- npm install axios
 - 
+
+## Route Parameters;
+
 ## Programmatic Redirects
 ``sh
 setTimeout(()=>{
