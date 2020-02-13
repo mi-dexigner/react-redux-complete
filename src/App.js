@@ -5,6 +5,7 @@ import Home from './components/Home'
 import About from './components/About'
 import Contact from './components/Contact'
 import Post from './components/Post'
+import TodoList from './TodoList'
 
 class App extends Component{
 
@@ -18,6 +19,7 @@ render() {
           <Route path='/about' component={About} />
           <Route path='/contact' component={Contact} />
           <Route path='/:post_id' component={Post} />
+          <Route path='/todos' component={TodoList} />
           </Switch>
     </div>
     </BrowserRouter>

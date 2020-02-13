@@ -51,6 +51,10 @@
 - npm install axios
 - 
 
+## Redux Setting
+- https://codepen.io/midexigner/pen/PoqodyB
+- npm install redux react-redux
+
 ## Route Parameters;
 
 ## Programmatic Redirects
