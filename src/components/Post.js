@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { deletePost } from '../actions/postActions'
 // import axios from 'axios'
 
 class Post extends Component {
@@ -55,7 +56,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    deletePost: (id) => dispatch({type: 'DELETE_POST', id: id})
+    deletePost: (id) => dispatch(deletePost(id))
   }
 }
 

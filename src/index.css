@@ -10,8 +10,8 @@ nav a.active{
   transition: all ease 0.5s;
 }
 
-.container{
-  margin-top: 20px;
+.home .post:first-child{
+  margin-top: 40px;
 }
 
 .home .post img{
