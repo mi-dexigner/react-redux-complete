@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
-// import axios from 'axios'
+ import axios from 'axios'
 //  https://www.youtube.com/watch?v=EPnBO8HgyRU
 
 export default class Contact extends Component {
+  
+  // https://blog.bitsrc.io/how-to-build-a-contact-form-with-react-js-and-php-d5977c17fec0
   constructor() {
     super()
 
@@ -111,6 +113,7 @@ export default class Contact extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const { fname, lname, cemail, currentweb, budget, project, interested, cdetails, about, referred } = this.state;
+    const API_PATH = 'http://localhost/javascript/react-redux-complete/sendEmail.php';
     const err = this.validate();
     if (!err) {
       
@@ -129,7 +132,18 @@ export default class Contact extends Component {
   
       }
     );
-     
+    axios({
+      method: 'post',
+      url: `${API_PATH}`,
+      headers: { 'content-type': 'application/json' },
+      data: this.state
+    })
+      .then(result => {
+        this.setState({
+          mailSent: result.data.sent
+        })
+      })
+      .catch(error => this.setState({ error: error.message }));
       /*  const form =  axios.post('/api/form',{
         fname,
         lname,
@@ -254,9 +268,9 @@ export default class Contact extends Component {
                   </div>
                 </div>
                 <div className="row">
-                  <div className=" col s12">
+                  <div className="col s12">
                     <label htmlFor="referred">If you were referred to me, who sent you here?</label>
-                    <input type="text" name="about" defaultValue={this.state.referred} onChange={this.handleChange} />
+                    <input type="text" name="referred" defaultValue={this.state.referred} onChange={this.handleChange} />
                     <span className="helper-text red-text lighten-1">{this.state.referredError}</span>
                   </div>
                 </div>
@@ -264,6 +278,9 @@ export default class Contact extends Component {
                   <div className="col s12">
                     <button className="btn waves-effect waves-light" type="submit" name="action">Send
   </button>
+  {this.state.mailSent &&
+    <div>Thank you for contcting us.</div>
+  }
                   </div>
                 </div>
 
