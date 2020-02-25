@@ -30,6 +30,7 @@ export default class Contact extends Component {
       referred: '',
       referredError: '',
       mailSent: false,
+      error: null
     }
 
     this.handleChange = this.handleChange.bind(this)
@@ -139,9 +140,14 @@ export default class Contact extends Component {
       data: this.state
     })
       .then(result => {
-        this.setState({
-          mailSent: result.data.sent
-        })
+        if (result.data.sent) {
+          this.setState({
+            mailSent: result.data.sent
+          });
+          this.setState({ error: false });
+        } else {
+          this.setState({ error: true });
+        }
       })
       .catch(error => this.setState({ error: error.message }));
       /*  const form =  axios.post('/api/form',{
