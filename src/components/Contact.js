@@ -112,8 +112,8 @@ export default class Contact extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const { fname, lname, cemail, currentweb, budget, project, interested, cdetails, about, referred } = this.state;
-    const API_PATH = 'http://localhost/javascript/react-redux-complete/sendEmail.php';
+    //const { fname, lname, cemail, currentweb, budget, project, interested, cdetails, about, referred } = this.state;
+    const API_PATH = 'https://midexigner.com/devs/react/sendEmail.php';
     const err = this.validate();
     if (!err) {
       
@@ -129,7 +129,7 @@ export default class Contact extends Component {
         detailsError: "",
         aboutError: "",
         referredError: "",
-  
+        mailSent: false,
       }
     );
     axios({
