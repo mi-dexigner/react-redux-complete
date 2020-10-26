@@ -1,9 +1,9 @@
 - npx create-react-app
 - npm install react-router-dom
 - npm install redux react-redux
-
 - open index.js below code configure
-  ``sh
+
+```sh
   import {createStore} from 'redux'
 
 const store = createStore();
@@ -13,19 +13,32 @@ const store = createStore();
 - create a `store` folder inside the `src` folder
 - create a `reducers` folder inside the `store` folder
 
----
 
--https://redux.js.org/introduction/getting-started
+- https://redux.js.org/introduction/getting-started
 
 - https://react-redux.js.org/introduction/quick-start
 
-short key:
-rfc
-rce
 
----
+### Adding Dummy Data
 
-- https://www.youtube.com/watch?v=xOTFCxMQFYA
-- https://www.youtube.com/watch?v=dpRYYjzGA1Q
-- https://fahmidasclassroom.com/host-an-angular-8-project-in-apache-server/
+- create `projectReducer.js` inside a `reducer` folder
+
+```sh
+const initState = {
+  projects: [
+    {id: '1', title: 'help me find peach', content: 'blah blah blah'},
+    {id: '2', title: 'collect all the stars', content: 'blah blah blah'},
+    {id: '3', title: 'egg hunt with yoshi', content: 'blah blah blah'}
+  ]
+};
+
+const projectReducer = (state = initState, action) => {
+  return state;
+};
+
+export default projectReducer;
+
 ```
+
+
+### Async Code with Redux
