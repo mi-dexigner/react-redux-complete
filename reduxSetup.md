@@ -41,4 +41,12 @@ export default projectReducer;
 ```
 
 
-### Async Code with Redux
+### Using Thunk
+- npm install redux-thunk
+
+- add `index.js`
+```sh
+import thunk from 'redux-thunk'
+
+```
+
