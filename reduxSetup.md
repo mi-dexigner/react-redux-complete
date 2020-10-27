@@ -50,3 +50,7 @@ import thunk from 'redux-thunk'
 
 ```
 
+
+### Createting a firebase Setup
+- npm install firebase
+- 
