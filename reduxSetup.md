@@ -53,4 +53,8 @@ import thunk from 'redux-thunk'
 
 ### Createting a firebase Setup
 - npm install firebase
-- 
+- Firestore is a NoSQL database
+
+### Connecting Redux to Firebase
+- npm install react-redux-firebase redux-firestore
+- npm i --save react-redux-firebase@next
