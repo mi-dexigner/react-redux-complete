@@ -57,4 +57,12 @@ import thunk from 'redux-thunk'
 
 ### Connecting Redux to Firebase
 - npm install react-redux-firebase redux-firestore
-- npm i --save react-redux-firebase@next
+
+
+
+### Firebase Auth
+- Email
+- UID
+- Photo URL
+- display Name
+
