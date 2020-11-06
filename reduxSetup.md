@@ -66,3 +66,4 @@ import thunk from 'redux-thunk'
 - Photo URL
 - display Name
 
+- npm install moment --save

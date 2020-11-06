@@ -21,12 +21,21 @@ const store = createStore(rootReducer,
     reduxFirestore(firebase, fbConfig)
   )
 );
+
+const profileSpecificProps = {
+  userProfile: 'users',
+  useFirestoreForProfile: true,
+  enableRedirectHandling: false,
+  resetBeforeLogin: false
+}
 const reactReduxFirebaseProps = {
   firebase ,
-  config: fbConfig,
+  config: profileSpecificProps,
   attachAuthIsReady: true,
   dispatch: store.dispatch,
-  createFirestoreInstance
+  createFirestoreInstance,
+  userProfile: 'users',
+  useFirestoreForProfile: true // Firestore for Profile instead of Realtime DB
 }
 function AuthIsLoaded({ children }) {
   const auth = useSelector(state => state.firebase.auth)
